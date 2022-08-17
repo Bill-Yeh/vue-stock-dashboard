@@ -9,6 +9,7 @@
 </template>
 
 <style lang="scss">
+@import "assets/scss/_main.scss";
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -16,14 +17,12 @@
   text-align: center;
   color: #2c3e50;
 }
-
 nav {
+  background-color: $color;
   padding: 30px;
-
   a {
     font-weight: bold;
     color: #2c3e50;
-
     &.router-link-exact-active {
       color: #42b983;
     }
