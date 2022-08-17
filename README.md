@@ -1,5 +1,17 @@
 # vue-stock-dashboard
 
+## Devop to github-page
+
+1. 
+```
+npm run build
+```
+
+2. 切至git-bash
+```sh
+sh deploy.sh
+```
+
 ## Project setup
 ```
 npm install
