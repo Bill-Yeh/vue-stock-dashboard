@@ -1,0 +1,150 @@
+// rwd漢堡選單開關設定
+#rwd-switch{
+    position: absolute;
+    left: -1000px;
+}
+#rwd-switch:checked ~ header .header_hb span:first-child{
+    top: 19px;
+    transform: rotate(45deg);
+    transition:top .3s, transform .3s .1s;
+}
+#rwd-switch:checked ~ header .header_hb span:nth-child(2){
+    display: none;
+}
+#rwd-switch:checked ~ header .header_hb span:last-child{
+    bottom: 19px;
+    transform: rotate(-45deg);
+    transition:bottom .3s, transform .3s .1s;
+}
+#rwd-switch:checked ~ header .rwd-main-nav{
+    left: 0;
+    opacity: 1;
+    transition: opacity .5s;
+}
+
+// ----------------------------------------------------
+
+.rwd-header {
+    width: 100%;
+    background-color: $primary;
+    height: 60px;
+
+    .header-wrap{
+        width: 95%;
+        margin: auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 5px;
+
+        .header_hb{
+            display: flex;
+            flex-direction: column;
+            width: 40px;
+            height: 40px;
+            position: relative;
+
+            span{
+                position: absolute;
+                left: 0;
+                right: 0;
+                width: 36px;
+                height: 2px;
+                margin: auto;
+                background-color: #fff;
+            }
+            span:first-child{
+                top: 11px;
+              }
+            span:nth-child(2){
+                top: 0;
+                bottom: 0;
+            }
+            span:last-child{
+                bottom: 11px;
+            }
+        }
+
+        .header-logo{
+            width: 15%;
+            img{
+                width: 90%;
+            }
+        }
+        .header-bell{
+            i{
+                font-size: 1.25rem;
+                color: #fff;
+            }
+        }
+    }
+
+    .rwd-main-nav{
+        position: absolute;
+        top: 60px;
+        left: -1000px;
+        opacity: 0;
+        transition: opacity .5s, left 0s .5s;
+        width: 100%;
+        height: 100vh;
+        background-color: #ADFFFA;
+
+        .rwd-main-nav-wrap{
+            width: 95%;
+            margin: auto;
+            margin-top: 30px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+
+            .search-function{
+                position: relative;
+                input{
+                    padding: 8px 8px 8px 28px;
+                    outline: none;
+                    color: $colorText;
+                    border-radius: 20px;
+                    border: none;
+                }
+                i{
+                    position: absolute;
+                    top: 8px;
+                    left: 5px;
+                    color: rgb(141, 141, 141);
+                }
+            }
+
+            .rwd-nav-item{
+                width: 70%;
+                margin-top: 20px;
+
+                .item-list{
+                    li{
+                        padding: 20px 0;
+                        font-size: 1.5rem;
+                    }
+                    i{
+                        color: $primary;
+                    }
+                    .rwd-home, .rwd-stock, .rwd-crypto{
+                        display: flex;
+                        align-items: center;
+                        span{
+                            padding-left: 30px;
+                        }
+                    }
+                    .rwd-exchange, .rwd-member{
+                        display: flex;
+                        justify-content: space-around;
+                        align-items: center;
+                        span{
+                            padding-left: 30px;
+                            flex-grow: 1;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

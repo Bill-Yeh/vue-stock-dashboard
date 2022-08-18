@@ -1,0 +1,40 @@
+@mixin btn() {
+    font-size: 16px;
+    border-radius: 20px;
+    background-color: #0655ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    transition: .3s;
+    @content;
+    //hover效果
+    &:hover{
+        background-color: #4a83ff;
+    }
+}
+
+//rwd斷點
+@mixin md(){
+    @media screen and (min-width : $md_breakpoint) {
+        @content 
+    }
+};
+
+@mixin lg(){
+    @media screen and (min-width : $lg_breakpoint) {
+        @content 
+    }
+};
+
+@mixin xl(){
+    @media screen and (min-width : $xl_breakpoint) {
+        @content 
+    }
+};
+
+@mixin xxl(){
+    @media screen and (min-width : $xxl_breakpoint) {
+        @content 
+    }
+};

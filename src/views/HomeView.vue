@@ -1,9 +1,6 @@
 <template>
   <div class="home">
     <!-- <HelloWorld msg="Welcome to Your Vue.js App" /> -->
-    <div class="bg-red-200">
-      <button class="btn">home button</button>
-    </div>
   </div>
 </template>
 
@@ -22,6 +19,6 @@ export default {
 <style lang="scss" scoped>
 @import "../assets/scss/main";
 .btn {
-  background-color: $color;
+  background-color: $colorText;
 }
 </style>
