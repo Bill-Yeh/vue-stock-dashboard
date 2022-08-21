@@ -31,13 +31,17 @@
 }
 
 // ------------左半部---------------------------------------
-
+.sidebar-left{
+    @include xl(){
+        width: 20%;
+    }
+}
 .rwd-header {
     width: 100%;
     background-color: $primary;
     height: 60px;
     @include xl(){
-        width: 20%;
+        width: 100%;
         height: auto;
     }
 

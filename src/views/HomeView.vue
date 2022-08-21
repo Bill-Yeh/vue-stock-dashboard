@@ -17,8 +17,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-@import "../assets/scss/main";
-.btn {
-  background-color: $colorText;
-}
+@import "../assets/scss/main.scss";
 </style>
