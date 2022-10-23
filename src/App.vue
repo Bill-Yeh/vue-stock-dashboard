@@ -1,6 +1,7 @@
 <template>
   <v-app>
-    <v-app-bar app color="primary" dark>
+    <Navigation_drawers />
+    <!-- <v-app-bar app color="primary" dark>
       <div class="d-flex align-center">
         <v-img
           alt="Vuetify Logo"
@@ -31,8 +32,7 @@
         <span class="mr-2">Latest Release</span>
         <v-icon>mdi-open-in-new</v-icon>
       </v-btn>
-    </v-app-bar>
-
+    </v-app-bar> -->
     <v-main>
       <router-view />
     </v-main>
@@ -40,9 +40,10 @@
 </template>
 
 <script>
+import Navigation_drawers from "./components/navigation_drawers.vue";
 export default {
   name: "App",
-
+  components: { Navigation_drawers },
   data: () => ({
     //
   }),
